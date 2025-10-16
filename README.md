@@ -1,4 +1,4 @@
-integração com API
+Integração com API
 
 Foi empregada a Exchangerate-API, acessada através do método HTTP GET utilizando axios. A resposta em JSON é processada para obter a taxa de câmbio entre duas moedas:
 
