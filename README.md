@@ -1,33 +1,27 @@
-Integração com API
+integração com API
 
-Foi usada a Exchangerate-API, acessada via método HTTP GET usando axios.
-A resposta JSON é tratada para extrair a taxa de câmbio entre duas moedas:
+Foi empregada a Exchangerate-API, acessada através do método HTTP GET utilizando axios. A resposta em JSON é processada para obter a taxa de câmbio entre duas moedas:
 
 const taxa = data.conversion_rates[target.toUpperCase()];
 
+O sistema fornece informações estruturadas (moeda base, moeda alvo, taxa de câmbio e origem), além de lidar com problemas de rede ou moedas que não são válidas.
 
-O sistema retorna dados organizados (moeda base, alvo, taxa e fonte) e trata erros de rede ou moedas inválidas.
+Uso de SDK (Conceitual)
 
- Uso de SDK (Conceitual)
+A função validarPaisSDK emula um SDK, que torna operações de integração complexas mais simples. Ela devolve o status e o nome do país com base no código fornecido. Os SDKs beneficiam os desenvolvedores de várias maneiras, como:
 
-A função validarPaisSDK simula um SDK, que abstrai operações complexas de integração.
-Ela retorna o status e o nome do país conforme o código informado.
-SDKs facilitam o trabalho do desenvolvedor porque:
+Facilitando a utilização de serviços externos;
 
-Simplificam o uso de serviços externos;
+Permitindo o reaproveitamento de código já testado;
 
-Reaproveitam código confiável;
+Minimizando falhas e tornando a integração mais segura.
 
-Reduzem erros e tornam a integração mais segura.
+ Configuração na Nuvem (Conceitual)
 
-☁️ Configuração na Nuvem (Conceitual)
+Para a hospedagem do sistema em um ambiente de produção, as seguintes opções podem ser consideradas:
 
-Para hospedar o sistema em produção, poderiam ser usados:
+AWS EC2: oferece total controle e escalabilidade.
 
-AWS EC2: controle total e escalabilidade.
+Azure App Service: facilita a implantação de aplicações Node.js.
 
-Azure App Service: fácil implantação de apps Node.js.
-
-Google Cloud Run: execução serverless e cobrança por uso.
-
-Esses serviços oferecem disponibilidade, segurança e escalabilidade para a aplicação.
+Google Cloud Run: permite execução sem servidor e pagamento baseado no consumo.
